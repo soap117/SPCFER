@@ -97,7 +97,7 @@ we can determine which of the records should be returned based on their
 similarities with <img src="http://chart.googleapis.com/chart?cht=tx&chl=q" style="border:none;">. Let <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_{f}(q,r)" style="border:none;"> be the similarity value between <img src="http://chart.googleapis.com/chart?cht=tx&chl=q" style="border:none;">
 and <img src="http://chart.googleapis.com/chart?cht=tx&chl=r" style="border:none;"> by using a similarity predicate <img src="http://chart.googleapis.com/chart?cht=tx&chl=f" style="border:none;">. 
 
-Let $F$ be a set of all similarity
+Let <img src="http://chart.googleapis.com/chart?cht=tx&chl=F" style="border:none;"> be a set of all similarity
 predicates. We will have a brief review of the existing similarity predicates in
 Section Related. Let <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_{f}(q.a,r.a)" style="border:none;"> be the similarity value
 between <img src="http://chart.googleapis.com/chart?cht=tx&chl=q.a" style="border:none;"> and <img src="http://chart.googleapis.com/chart?cht=tx&chl=r.a" style="border:none;"> that is computed by <img src="http://chart.googleapis.com/chart?cht=tx&chl=f" style="border:none;">. Since each record may have $m$
