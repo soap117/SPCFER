@@ -93,19 +93,41 @@ trivial which poses some new challenges:
 One of the simplest
 ways to formulate a similarity predicate committee is to aggregate the results of
 all similarity predicates in the committee. For example, assume we have three
-similarity predicates: Jaccard coefficient \cite{Sarawagi_Kirpal_SIGMOD04},
-cosine similarity \cite{Cohen_SIGMOD98} and edit distance
-\cite{Gravano_Ipeirotis_VLDB01}. Given a query record $q$ and a set of records
+similarity predicates: Jaccard coefficient (Sarawagi_Kirpal_SIGMOD04),
+cosine similarity (Cohen_SIGMOD98) and edit distance
+(Gravano_Ipeirotis_VLDB01). Given a query record $q$ and a set of records
 $R$, assume that we have calculated the similarities between $q$ and each record
 in $R$ by using the just mentioned three similarity predicates, which are shown
-in Table \ref{table:ex2}. In Table \ref{table:ex2}, the values in the column
+in Table 1. In Table 1, the values in the column
 ``Overall'' are computed by averaging their corresponding three similarity
-values.\footnote{In this example, we use average to aggregate the decisions,
-which is the most common technique. We can use other functions, such as maximum.
-Using which function does not affect the discussion in this section.} According
-to Table \ref{table:ex2}, we say that {\it $q$ is more similar to $r_2$ than
-$r_1$ because the overall similarity between $q$ and $r_2$ is higher}.
+values.According to Table 1, we say that (<img src="http://chart.googleapis.com/chart?cht=tx&chl= q" style="border:none;"> is more similar to $r_2$ than
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= r_1" style="border:none;"> because the overall similarity between <img src="http://chart.googleapis.com/chart?cht=tx&chl= q" style="border:none;"> and <img src="http://chart.googleapis.com/chart?cht=tx&chl= r_2" style="border:none;"> is higher).
 
+![](https://github.com/soap117/Similarity-Predicate-Committee-for-Entity-Resolution/blob/master/table1.jpg)
+
+Despite of this approach is intuitive, it may not always be able to solve the
+entity resolution problem effectively. For example, {\it if} we have some prior
+knowledge that the two similarity values computed by Jaccard coefficient is {\it
+far more reliable} than the others, then we {\it may want to alter our
+aforementioned decision and conclude that $q$ is more similar to $r_1$ than
+$r_2$}. A different conclusion is obtained. In fact, associating a confidence
+value to every member's decision in a committee is a very important topic. For
+instance, a research in classifier committee \cite{G.Fung_ICDM06} shows that
+associating a confidence value to each classifier in the committee can
+significantly improve the effectiveness of a classifier committee. Moreover,
+\cite{Chandel_Hassanzadeh_SIGMOD07} also shows that different similarity
+predicate has different effectiveness in handling different type of error. Hence,
+assigning a confidence value to each similarity predicate is necessary.
+
+
+
+Unfortunately, even we theoretically know which similarity predicate is more
+effective in handling which type of error, we can never anticipate the types of
+errors may occur and how many errors would exist in a record. Assigning
+confidences to the similarity predicates becomes very difficult. For example, in
+Table \ref{table:ex2}, it is difficult to tell which similarity predicate is more
+reliable by simply looking at those numbers. In this paper, we try to solve
+this problem by using a consensus world model \cite{J.Li_PODS09}.
 ### Challenge 2
 ### Challenge 3
 ## Header 2
