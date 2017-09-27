@@ -28,27 +28,27 @@ unsupervised.
 
 ## Introduction
 
-Entity resolution is also known as record linkage \cite{O.Benjelloun_TR05},
-object identification or name disambiguation \cite{S.Tejada_KDD02}, data cleaning
-\cite{H.Do_VLDB02}, approximate joins \cite{S.Guha_VLDB04} and fuzzy matching
-\cite{R.Ananthakrishna_VLDB02}. A typical entity resolution problem is to
+Entity resolution is also known as record linkage (O.Benjelloun_TR05),
+object identification or name disambiguation (S.Tejada_KDD02), data cleaning
+(H.Do_VLDB02), approximate joins (S.Guha_VLDB04} and fuzzy matching
+(R.Ananthakrishna_VLDB02). A typical entity resolution problem is to
 identify records that belong to the same entity (e.g. whether George Smith and
-George Smath refers to the same person) \cite{W.E.Winkler_TR06}. Entity
+George Smath refers to the same person) (W.E.Winkler_TR06). Entity
 resolution is especially important in this Internet age because numerous online
 applications require entity resolution, such as name disambiguation in digital
 libraries, searching a person in a social network (such as facebook), etc. Many
 different techniques can be found in the existing work to tackle this problem
 (e.g.
-\cite{W.E.Winkler_TR06,Gusfield_CUP97,Jaro_JASA84,Winkler_USBC99,Sarawagi_Kirpal_SIGMOD04,Gravano_Ipeirotis_VLDB01,Chandel_Hassanzadeh_SIGMOD07}).
+(.E.Winkler_TR06,Gusfield_CUP97,Jaro_JASA84,Winkler_USBC99,Sarawagi_Kirpal_SIGMOD04,Gravano_Ipeirotis_VLDB01,Chandel_Hassanzadeh_SIGMOD07).
 Regardless of which techniques we use, a fundamental issue is to define an
 appropriate similarity predicate (a.k.a. similarity function) to measure the
 similarities among records.
 
 
 
-Since \cite{Hernandez_Stolfo_SIGMOD95} introduced the entity resolution problem
+Since (rnandez_Stolfo_SIGMOD95)introduced the entity resolution problem
 into our community, many similarity predicates were exploited (e.g.
-\cite{Sarawagi_Kirpal_SIGMOD04,Gravano_Ipeirotis_VLDB01,Chandel_Hassanzadeh_SIGMOD07,Cohen_SIGMOD98}).
+(Sarawagi_Kirpal_SIGMOD04,Gravano_Ipeirotis_VLDB01,Chandel_Hassanzadeh_SIGMOD07,Cohen_SIGMOD98)).
 While we agreed that most, if not all, of the existing similarity predicates
 (e.g. Jaccard coefficient, cosine similarity, BM25, language model, Hidden Markov
 Model, etc) are well defined and effective, we observed that none of them can
@@ -89,7 +89,25 @@ of the single similarity predicates. However, modelling these two elements is no
 trivial which poses some new challenges:
 
 
-# Header 1
+### Challenge 1 (Confidences of Similarity Predicates)
+One of the simplest
+ways to formulate a similarity predicate committee is to aggregate the results of
+all similarity predicates in the committee. For example, assume we have three
+similarity predicates: Jaccard coefficient \cite{Sarawagi_Kirpal_SIGMOD04},
+cosine similarity \cite{Cohen_SIGMOD98} and edit distance
+\cite{Gravano_Ipeirotis_VLDB01}. Given a query record $q$ and a set of records
+$R$, assume that we have calculated the similarities between $q$ and each record
+in $R$ by using the just mentioned three similarity predicates, which are shown
+in Table \ref{table:ex2}. In Table \ref{table:ex2}, the values in the column
+``Overall'' are computed by averaging their corresponding three similarity
+values.\footnote{In this example, we use average to aggregate the decisions,
+which is the most common technique. We can use other functions, such as maximum.
+Using which function does not affect the discussion in this section.} According
+to Table \ref{table:ex2}, we say that {\it $q$ is more similar to $r_2$ than
+$r_1$ because the overall similarity between $q$ and $r_2$ is higher}.
+
+### Challenge 2
+### Challenge 3
 ## Header 2
 ### Header 3
 
