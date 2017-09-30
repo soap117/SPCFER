@@ -181,13 +181,13 @@ result, we can reduce the discrepancy among different similarity predicates to a
 Given a particular similarity predicate f ∈ F, we can compute <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;"> for all r ∈ R. Accordingly, we can rank the
 records in R based on the values of <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;">,∀r. Let Lf be
 a list of records sorted by the descending order of <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;">.
-We then use Lf(i) to denote the record at rank i in Lf
+We then use <img src="http://chart.googleapis.com/chart?cht=tx&chl=L_f{i)" style="border:none;"> to denote the record at rank i in <img src="http://chart.googleapis.com/chart?cht=tx&chl=L_f" style="border:none;">
 .
 Now, our problem is to determine how confident a similarity predicate f would have when it ranks the records in
 Lf
 . Obviously, if the similarity values in Lf are very similar, then we are more easy to make mistakes in ranking.
 As a result, the confidences of similarity predicates in rankings should be highly related to the distribution of similarity
-values. Let αf(r, k) be the confidence of similarity predicate f in the ranking of record r. We model <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;"> as the
+values. Let <img src="http://chart.googleapis.com/chart?cht=tx&chl=\alpha_f(r,k)" style="border:none;"> be the confidence of similarity predicate f in the ranking of record r. We model <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;"> as the
 probability of record r is ranked at position k in the final
-ranking given that its similarity value is <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;"> according to (Bishop and Dudewicz 1978). Specifically, αf(r, k) is
+ranking given that its similarity value is <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;"> according to (Bishop and Dudewicz 1978). Specifically, <img src="http://chart.googleapis.com/chart?cht=tx&chl=\alpha_f(r,k)" style="border:none;"> is
 computed as follows:
