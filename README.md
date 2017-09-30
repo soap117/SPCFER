@@ -107,7 +107,7 @@ overall similarity between <img src="http://chart.googleapis.com/chart?cht=tx&ch
 <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_{f}(q.a,r.a),\forall{a}\in{A}" style="border:none;">, i.e. <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_{f}(q,r)=\frac{1}{|A|}\sum_{\forall{a}\in{A}}sim_{f}(q.a,r.a)" style="border:none;">. Yet, in this paper, we
 will take a different approach in modeling this element. In this paper, we are
 trying to solve the following problem:
-### Probelm
+>>### Probelm
 
 Given a relation <img src="http://chart.googleapis.com/chart?cht=tx&chl=R" style="border:none;">, a query record <img src="http://chart.googleapis.com/chart?cht=tx&chl=q" style="border:none;"> and a set of similarity predicates <img src="http://chart.googleapis.com/chart?cht=tx&chl=F" style="border:none;">,
 our goal is to rank the records in $R$ according to <img src="http://chart.googleapis.com/chart?cht=tx&chl=q" style="border:none;"> by 
