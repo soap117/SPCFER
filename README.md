@@ -113,6 +113,34 @@ trying to solve the following problem:
 our goal is to rank the records in <img src="http://chart.googleapis.com/chart?cht=tx&chl=R" style="border:none;"> according to <img src="http://chart.googleapis.com/chart?cht=tx&chl=q" style="border:none;"> by 
 properly combining the decisions of the similarity predicates in <img src="http://chart.googleapis.com/chart?cht=tx&chl=F" style="border:none;">.
 
+## Related Work
 
+To the best of our knowledge, this is the first piece of study
+about similarity predicate committee and its application to
+entity resolution. (Hernandez and Stolfo 1995) was the ´
+first one to introduce entity resolution problem to our computer science discipline. A variety of similarity predicates
+were exploited thereafter, such as ED, GES, Intersect, Jaccard, Cosine, BM25, SoftTfIdf, HMM and language model
+(Chandel et al. 2007).
+A necessary pre-processing step in entity resolution is to
+define the meaning of word in a string. Q-grams (Gravano
+et al. 2001) is therefore proposed. (Li, Wang, and Yang
+2007) proposed a concept called v-gram to improve the effi-
+ciency of q-gram. In this paper, our proposed framework is
+a generic one, which is independent of the implementation
+details of similarity predicates or preprocessing processes.
+In terms of forming a committee to make decisions, there
+are lots of studies in the data mining community. There are
+two types of classifier committees, homogeneous classifier
+committee and heterogeneous classifier committee. A homogeneous classifier committee contains N classifiers come
+from the same learning algorithm (Witten and Frank 2005).
+From a high level point of view, the idea of formulating a
+similarity predicate committee is parallel to formulate a heterogeneous classifier committee – both are trying to make
+decisions by pooling individual decisions and each individual comes from a different predicate/algorithm. Yet, the
+technical details of classifier committee and similarity predicate committee are totally different. For instance, in all classification problems, we are given a set of training data for
+training the classifiers; for our problem, we neither need any
+training data nor request any user contribution. Our framework therefore is an unsupervised learning framework. We
+cannot apply the existing techniques directly to solve our
+problem.
 
+## Proposed Work
 
