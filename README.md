@@ -72,7 +72,7 @@ defines our problem; Section briefly discusses some related
 work; Section presents our proposed work; Section conducts evaluation; Section concludes this paper.
 ##  Problem Definition
 
-Table 2 shows the notations used in this paper. Let $R$ be a
+Table 2 shows the notations used in this paper. Let <img src="http://chart.googleapis.com/chart?cht=tx&chl=R" style="border:none;"> be a
 relation which contains <img src="http://chart.googleapis.com/chart?cht=tx&chl=|R|" style="border:none;"> records. Let <img src="http://chart.googleapis.com/chart?cht=tx&chl=A" style="border:none;"> be a set of attributes in <img src="http://chart.googleapis.com/chart?cht=tx&chl=R" style="border:none;">. Let
 <img src="http://chart.googleapis.com/chart?cht=tx&chl=r" style="border:none;"> be a record in <img src="http://chart.googleapis.com/chart?cht=tx&chl=R" style="border:none;"> and <img src="http://chart.googleapis.com/chart?cht=tx&chl=a" style="border:none;"> be an attribute in <img src="http://chart.googleapis.com/chart?cht=tx&chl=A" style="border:none;">. We use <img src="http://chart.googleapis.com/chart?cht=tx&chl=r.a" style="border:none;"> to denote the
 value of attribute <img src="http://chart.googleapis.com/chart?cht=tx&chl=a" style="border:none;"> in record $r$. Let $q$ be a query record and <img src="http://chart.googleapis.com/chart?cht=tx&chl=q.a" style="border:none;"> be the
