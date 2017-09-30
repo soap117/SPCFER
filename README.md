@@ -142,5 +142,7 @@ training data nor request any user contribution. Our framework therefore is an u
 cannot apply the existing techniques directly to solve our
 problem.
 
+![](https://github.com/soap117/Similarity-Predicate-Committee-for-Entity-Resolution/blob/master/table3.png)
+
 ## Proposed Work
 
