@@ -85,7 +85,7 @@ Let <img src="http://chart.googleapis.com/chart?cht=tx&chl=T_{r.a}" style="borde
 respectively. Unless otherwise specified, we refer to substrings of a string as
 tokens in a generic sense such that they can be words, q-grams
 s (Gravano et al. 2001), v-grams (Li, Wang, and Yang 2007), etc. For example,
-suppose <img src="http://chart.googleapis.com/chart?cht=tx&chl={George}" style="border:none;">, then <img src="http://chart.googleapis.com/chart?cht=tx&chl=T_{r.a}=\{{Geo,eor,org,rge}\}" style="border:none;"> for
+suppose <img src="http://chart.googleapis.com/chart?cht=tx&chl={George}" style="border:none;">, then <img src="http://chart.googleapis.com/chart?cht=tx&chl=T_{r.a}=\{Geo,eor,org,rge\}" style="border:none;"> for
 <img src="http://chart.googleapis.com/chart?cht=tx&chl=q=3" style="border:none;"> in q-grams.
 
 
