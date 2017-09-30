@@ -146,3 +146,26 @@ problem.
 
 ## Proposed Work
 
+To formulate an effective similarity predicate committee, we first try to
+identify the confidences of different similarity predicates. We observed that our ultimate
+objective is not trying to compute the similarity between q and
+r(refers to the Section 2), but is trying to rank r according to
+<img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r),\forall{f}\in{F}" style="border:none;">. For each <img src="http://chart.googleapis.com/chart?cht=tx&chl=f\in{F}" style="border:none;">, we can obtain the ranking of all <img src="http://chart.googleapis.com/chart?cht=tx&chl=r\in{R}" style="border:none;"> based on <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;">. Accordingly, for each <img src="http://chart.googleapis.com/chart?cht=tx&chl=r\in{R}" style="border:none;"> and each <img src="http://chart.googleapis.com/chart?cht=tx&chl=f\in{F}" style="border:none;">, we model the
+confidence of f in ranking r by {\it the probability of r appears in a
+given position in the final rank based on <img src="http://chart.googleapis.com/chart?cht=tx&chl=sim_f(q,r)" style="border:none;">}. Details of this process
+will be discussed in the Section Confidences of Similarity Predicates.
+
+
+We then try to rank the records by combining the decisions of all member
+similarity predicates in the committee based on their confidences in ranking the
+records. We will show that how we formulate this problem as a 0-1 integer
+programming problem. Details of
+this process will be discussed in Section.
+
+### Confidences of Similarity Predicates
+In this section, we present how we obtain the confidences of
+similarity predicates. Based on the reliability of attribute a,
+β(a), we can compute the similarity value of each record r
+to the query record q by using weighted average (Witten and
+Frank 2005):
+
