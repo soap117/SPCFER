@@ -169,3 +169,5 @@ similarity predicates. Based on the reliability of attribute a,
 to the query record q by using weighted average (Witten and
 Frank 2005):
 
+![](https://github.com/soap117/Similarity-Predicate-Committee-for-Entity-Resolution/blob/master/eq1.png)
+
